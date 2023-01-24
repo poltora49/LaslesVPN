@@ -1,0 +1,138 @@
+@import "normalize";
+$main_color: #F53838;
+$main_text:#0B132A;
+$secondary_text:#4F5665;
+// $secondary_color: #F53855;
+
+    * {
+        font-family: 'Rubik', sans-serif;
+        color:$secondary_text;
+    }
+
+    h1 {
+        font-weight: 500;
+        font-size: 50px;
+        line-height: 70px;
+        color:$main_text;
+    }
+
+    h2 {
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 50px;
+        color: $main_text;
+
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 30px;
+        color: $main_text;
+    }
+
+    h4 {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+        color: $main_text;
+    }
+
+    h5 {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    li {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 30px;
+    }
+    mark{
+        color: $main_text;
+        font-weight: bold;
+    }
+    header {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: $secondary_text;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        padding: 50px 0 100px;
+        margin: 0 150px;
+
+        nav {
+            width: 30%;
+                ul {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                a:hover{
+                    color: $main_color;
+                }
+                }
+        }
+        .header-buttons {
+            a{
+                padding:0 15px;
+                font-weight: bold;
+                color: $main_text;
+            }
+            & a:last-of-type {
+                padding: 13px 45px;
+                border: 1px solid #F53855;
+                border-radius: 50px;
+                color:$main_color;
+            }
+        }
+    }
+    main {
+        padding: 0 150px;
+        button{
+
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 25px;
+            width: 250px;
+            height: 60px;
+            background: #F53838;
+            border-radius: 10px;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        .main-banner {
+            display: flex;
+            align-items:center;
+            .main-banner--description{
+                width: 50%;
+                height:max-content;
+                margin-right: 40px;
+            }
+            
+            
+            
+        }
+        .features{
+            .container{
+                flex-direction: row-reverse;
+            }
+        }   
+    }
+
+    footer {
+
+    }
