@@ -142,6 +142,7 @@ p {
 }
 
 li {
+  display: flex;
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
@@ -251,4 +252,25 @@ main .features {
 }
 main .features .container {
   flex-direction: row-reverse;
+}
+main .features .container .features-image {
+  width: 50%;
+}
+main .features .container .features-content {
+  width: 50%;
+  box-sizing: border-box;
+  padding-left: 170px;
+  display: flex;
+  flex-direction: column;
+}
+main .features .container .features-content p {
+  padding: 20px 0;
+}
+main .features .container .features-content li {
+  display: flex;
+  padding-bottom: 15px;
+  align-items: center;
+}
+main .features .container .features-content li p {
+  padding: 0 0 0 15px;
 }/*# sourceMappingURL=index.css.map */

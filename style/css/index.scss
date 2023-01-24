@@ -51,6 +51,7 @@ $secondary_text:#4F5665;
     }
 
     li {
+        display: flex;
         font-weight: 400;
         font-size: 14px;
         line-height: 30px;
@@ -125,7 +126,7 @@ $secondary_text:#4F5665;
                     padding:20px 0 50px;
                 }
             }
-            img{
+            img {
                 width: 50%;
             }
         }
@@ -160,7 +161,31 @@ $secondary_text:#4F5665;
             margin-top: 95px;
             .container{
                 flex-direction: row-reverse;
-                
+                .features-image{
+                    width: 50%;
+                }
+                .features-content{
+                    width: 50%;
+                    box-sizing: border-box;
+                    padding-left: 170px;
+                    display: flex;
+                    flex-direction: column;
+                    
+                    p {
+                        padding: 20px 0;
+                    }
+                    li{
+                        display: flex;
+                        padding-bottom: 15px;
+                        align-items: center;
+                        p{
+                            padding:  0 0 0 15px;
+                            
+                        }
+                        
+                    }
+                }
+               
             }
         }   
     }
