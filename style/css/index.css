@@ -37,7 +37,7 @@ mark {
   background-color: transparent;
 }
 
-h1, h2, h3, h4, footer ul li, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p {
   font-size: inherit;
   font-weight: inherit;
 }
@@ -122,7 +122,7 @@ h3 {
   color: #0B132A;
 }
 
-h4, footer ul li {
+h4 {
   font-weight: 500;
   font-size: 18px;
   line-height: 30px;
@@ -169,7 +169,7 @@ header {
   margin: 0 150px;
 }
 header nav {
-  width: 30%;
+  width: 35%;
 }
 header nav ul {
   display: flex;
@@ -191,7 +191,71 @@ header .header-buttons a:last-of-type {
   color: #F53838;
 }
 
-main button {
+footer {
+  position: relative;
+  display: flex;
+  z-index: 1;
+  margin-top: 64px;
+  padding-bottom: 100px;
+  background: #f8f8f8;
+  box-shadow: 0 -165px 1px #f8f8f8;
+}
+footer .social-media {
+  display: flex;
+}
+footer figure {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  margin-right: 20px;
+  border-radius: 70px;
+  background-color: #F53838;
+}
+footer figure img {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  top: 0;
+  left: 0;
+}
+footer .social {
+  width: 50%;
+  color: #4F5665;
+  margin: 0 150px;
+}
+footer .social p {
+  width: 65%;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+footer .social mark {
+  font-weight: 500;
+  color: #4F5665;
+}
+footer nav {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 150px;
+}
+footer nav ul {
+  display: flex;
+  flex-direction: column;
+}
+footer nav ul li {
+  display: flex;
+  color: #0B132A;
+  padding-bottom: 10px;
+}
+footer nav ul li:first-of-type a {
+  color: #0B132A;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  padding-bottom: 20px;
+}
+
+button {
   color: white;
   font-weight: 700;
   font-size: 16px;
@@ -200,28 +264,33 @@ main button {
   height: 60px;
   background: #F53838;
   border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 0 6px 25px rgba(255, 0, 0, 0.4509803922);
 }
-main .container {
+
+.container {
   display: flex;
   align-items: center;
 }
-main .main-banner {
+
+.main-banner {
   display: flex;
   align-items: center;
   padding: 0 150px;
   margin-bottom: 100px;
 }
-main .main-banner .main-banner--description {
+.main-banner .main-banner--description {
   width: 50%;
   margin-right: 40px;
 }
-main .main-banner .main-banner--description p {
+.main-banner .main-banner--description p {
   padding: 20px 0 50px;
 }
-main .main-banner img {
+.main-banner img {
   width: 50%;
 }
-main .advantages, main .subscribe {
+
+.advantages, .subscribe {
   display: flex;
   height: 200px;
   margin: 0 150px;
@@ -231,58 +300,65 @@ main .advantages, main .subscribe {
   justify-content: space-between;
   box-shadow: 0 45px 45px #f6f6f7;
 }
-main .advantages .advantages-element, main .subscribe .advantages-element {
+.advantages .advantages-element, .subscribe .advantages-element {
   display: flex;
   align-items: center;
   padding-right: 130px;
   border-right: 2px solid #EEEFF2;
 }
-main .advantages .advantages-element figure, main .subscribe .advantages-element figure {
+.advantages .advantages-element figure, .subscribe .advantages-element figure {
   background: #FFECEC;
   border-radius: 70px;
   box-sizing: border-box;
   padding: 15.5px;
   margin: 16.5px;
 }
-main .advantages .advantages-element:last-of-type, main .subscribe .advantages-element:last-of-type {
+.advantages .advantages-element:last-of-type, .subscribe .advantages-element:last-of-type {
   padding: 0;
   border: 0;
 }
-main .features {
+.advantages img, .subscribe img {
+  width: 24px;
+  height: 24px;
+}
+
+.features {
   margin: 150px 95px 150px 153px;
 }
-main .features .container {
+.features .container {
   flex-direction: row-reverse;
 }
-main .features .container .features-image {
+.features .container .features-image {
   width: 50%;
 }
-main .features .container .features-content {
+.features .container .features-content {
   width: 50%;
   box-sizing: border-box;
   padding-left: 170px;
   display: flex;
   flex-direction: column;
 }
-main .features .container .features-content p {
+.features .container .features-content p {
   padding: 20px 0;
 }
-main .features .container .features-content li {
+.features .container .features-content li {
   padding-bottom: 15px;
 }
-main .features .container .features-content li p {
+.features .container .features-content li p {
   padding: 0 0 0 15px;
 }
-main .gradient-background {
+
+.gradient-background {
   padding: 0 150px;
   background: linear-gradient(#fafafa, white);
 }
-main .services {
+
+.services {
   display: flex;
   flex-direction: column;
   margin-bottom: 150px;
 }
-main .services .services-title {
+.services .services-title {
   width: 100%;
   display: flex;
   padding: 80px 0 60px 0;
@@ -290,15 +366,15 @@ main .services .services-title {
   align-items: center;
   text-align: center;
 }
-main .services .services-title p {
+.services .services-title p {
   padding-top: 20px;
   width: 50%;
 }
-main .services .services-list {
+.services .services-list {
   display: flex;
   justify-content: center;
 }
-main .services .services-list .services-list--product {
+.services .services-list .services-list--product {
   position: relative;
   width: 30%;
   padding: 76px 76px 30px 76px;
@@ -309,33 +385,33 @@ main .services .services-list .services-list--product {
   border: 2px solid #DDDDDD;
   border-radius: 10px;
 }
-main .services .services-list .services-list--product:hover {
+.services .services-list .services-list--product:hover {
   border: 2px solid #F53838;
 }
-main .services .services-list .services-list--product .services-product--distriction {
+.services .services-list .services-list--product .services-product--distriction {
   height: 80%;
   padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main .services .services-list .services-list--product .services-product--distriction h4, main .services .services-list .services-list--product .services-product--distriction footer ul li, footer ul main .services .services-list .services-list--product .services-product--distriction li {
+.services .services-list .services-list--product .services-product--distriction h4 {
   padding: 30px 0;
 }
-main .services .services-list .services-list--product .services-product--distriction li {
+.services .services-list .services-list--product .services-product--distriction li {
   padding-bottom: 10px;
 }
-main .services .services-list .services-list--product .services-product--select {
+.services .services-list .services-list--product .services-product--select {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   height: 20%;
 }
-main .services .services-list .services-list--product .services-product--select h3 {
+.services .services-list .services-list--product .services-product--select h3 {
   color: #4F5665;
 }
-main .services .services-list .services-list--product .services-product--select a {
+.services .services-list .services-list--product .services-product--select a {
   display: flex;
   padding: 13px 63px;
   margin: 20px 0;
@@ -344,68 +420,71 @@ main .services .services-list .services-list--product .services-product--select 
   font-weight: 700;
   color: #F53838;
 }
-main .services .services-list .services-list--product .services-product--select a:hover {
+.services .services-list .services-list--product .services-product--select a:hover {
   color: white;
   background-color: #F53838;
+  box-shadow: 0 6px 25px rgba(255, 0, 0, 0.4509803922);
 }
-main .global-map {
+
+.global-map {
   display: flex;
   flex-direction: column;
   margin-bottom: 125px;
 }
-main .global-map .global-map--title {
+.global-map .global-map--title {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding-bottom: 150px;
 }
-main .global-map .global-map--title h2 {
+.global-map .global-map--title h2 {
   width: 33%;
 }
-main .global-map .global-map--title p {
+.global-map .global-map--title p {
   width: 45%;
   padding-top: 20px;
 }
-main .global-map .global-map-map {
+.global-map .global-map-map {
   margin-left: auto;
   margin-right: auto;
 }
-main .global-map .global-map--partners {
+.global-map .global-map--partners {
   display: flex;
   align-items: center;
 }
-main .global-map .global-map--partners div:first-of-type {
+.global-map .global-map--partners div:first-of-type {
   padding-right: 48px;
 }
-main .global-map .global-map--partners div:last-of-type {
+.global-map .global-map--partners div:last-of-type {
   padding-left: 48px;
 }
-main .reviews {
+
+.reviews {
   display: flex;
   flex-direction: column;
 }
-main .reviews .reviews-main--title {
+.reviews .reviews-main--title {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding-bottom: 60px;
 }
-main .reviews .reviews-main--title h2 {
+.reviews .reviews-main--title h2 {
   width: 33%;
 }
-main .reviews .reviews-main--title p {
+.reviews .reviews-main--title p {
   width: 45%;
   padding-top: 20px;
 }
-main .reviews .swiper-initialized .reviews-swiper {
+.reviews .reviews-swiper {
   display: flex;
 }
-main .reviews .swiper-initialized .reviews-swiper:first-of-type {
+.reviews .reviews-swiper:first-of-type {
   margin-left: 50px;
 }
-main .reviews .swiper-initialized .reviews-swiper .reviews-person {
+.reviews .reviews-swiper .reviews-person {
   width: 400px;
   height: 230px;
   display: flex;
@@ -416,48 +495,48 @@ main .reviews .swiper-initialized .reviews-swiper .reviews-person {
   border: 2px solid #DDDDDD;
   border-radius: 10px;
 }
-main .reviews .swiper-initialized .reviews-swiper .reviews-person:hover {
+.reviews .reviews-swiper .reviews-person:hover {
   border: 2px solid #F53838;
 }
-main .reviews .swiper-initialized .reviews-swiper .reviews-person .reviews-title {
+.reviews .reviews-swiper .reviews-title {
   display: flex;
   flex-direction: row;
   padding-bottom: 8px;
 }
-main .reviews .swiper-initialized .reviews-swiper .reviews-person .reviews-title .reviews-person--name {
+.reviews .reviews-swiper .reviews-title .reviews-person--name {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main .reviews .swiper-initialized .reviews-swiper .reviews-person .reviews-title img {
+.reviews .reviews-swiper .reviews-title img {
   width: 50px;
   height: 50px;
   margin-right: 20px;
 }
-main .reviews .swiper-initialized .reviews-swiper .reviews-person .reviews-title .reviews-rate {
+.reviews .reviews-swiper .reviews-title .reviews-rate {
   display: flex;
   align-items: center;
   margin-left: auto;
 }
-main .reviews .swiper-initialized .reviews-swiper .reviews-person .reviews-title .reviews-rate img {
+.reviews .reviews-swiper .reviews-title .reviews-rate img {
   width: 16px;
   height: 16px;
   margin: 0;
   margin-left: 10px;
 }
-main .reviews .navigation {
+.reviews .navigation {
   display: flex;
   margin: 60px 150px;
 }
-main .reviews .tabs-container a {
+.reviews .tabs-container a {
   padding-left: 15px;
 }
-main .reviews .arrow-container {
+.reviews .arrow-container {
   margin-left: auto;
   display: flex;
   flex-direction: row;
 }
-main .reviews .arrow-container a {
+.reviews .arrow-container a {
   width: 60px;
   height: 60px;
   box-sizing: border-box;
@@ -465,55 +544,21 @@ main .reviews .arrow-container a {
   border: 2px solid #F53838;
   border-radius: 70px;
 }
-main .reviews .arrow-container a:last-of-type {
+.reviews .arrow-container a:last-of-type {
   margin-left: 20px;
   background-color: #F53838;
 }
-main .reviews .arrow-container a img {
+.reviews .arrow-container a img {
   width: 30px;
   height: 30px;
 }
-main .subscribe {
+
+.subscribe {
   position: relative;
   z-index: 2;
   background-color: white;
 }
-main .subscribe .subscribe-title {
+.subscribe .subscribe-title {
   margin: 58px 70p 58px;
   width: 37%;
-}
-
-footer {
-  position: relative;
-  display: flex;
-  z-index: 1;
-  margin-top: 64px;
-  margin-bottom: 100px;
-  background: #f8f8f8;
-  box-shadow: 0 -165px 1px #f8f8f8;
-}
-footer .social {
-  width: 50%;
-  color: #4F5665;
-  margin: 0 150px;
-}
-footer .social p {
-  width: 45%;
-  margin-bottom: 30px;
-  margin-top: 20px;
-}
-footer .social mark {
-  color: #4F5665;
-}
-footer ul {
-  display: flex;
-}
-footer ul li {
-  display: flex;
-  color: #0B132A;
-}
-footer ul li ul {
-  display: flex;
-  color: #4F5665;
-  flex-direction: column;
 }/*# sourceMappingURL=index.css.map */

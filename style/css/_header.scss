@@ -1,0 +1,38 @@
+header {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $secondary_text;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 50px 0 100px;
+    margin: 0 150px;
+
+    nav {
+        width: 35%;
+            ul {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+                a:hover{
+                    color: $main_color;
+                }
+            }
+    }
+    .header-buttons {
+        a{
+            padding:0 15px;
+            font-weight: bold;
+            color: $main_text;
+        }
+        & a:last-of-type {
+            padding: 13px 45px;
+            border: 1px solid #F53855;
+            border-radius: 50px;
+            color:$main_color;
+        }
+    }
+}
