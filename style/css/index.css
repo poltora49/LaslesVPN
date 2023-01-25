@@ -37,7 +37,7 @@ mark {
   background-color: transparent;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, footer ul li, h5, h6, p {
   font-size: inherit;
   font-weight: inherit;
 }
@@ -122,7 +122,7 @@ h3 {
   color: #0B132A;
 }
 
-h4 {
+h4, footer ul li {
   font-weight: 500;
   font-size: 18px;
   line-height: 30px;
@@ -132,7 +132,7 @@ h4 {
 h5 {
   font-weight: 400;
   font-size: 14px;
-  line-height: 30px;
+  line-height: 8px;
 }
 
 p {
@@ -221,7 +221,7 @@ main .main-banner .main-banner--description p {
 main .main-banner img {
   width: 50%;
 }
-main .advantages {
+main .advantages, main .subscribe {
   display: flex;
   height: 200px;
   margin: 0 150px;
@@ -231,20 +231,20 @@ main .advantages {
   justify-content: space-between;
   box-shadow: 0 45px 45px #f6f6f7;
 }
-main .advantages .advantages-element {
+main .advantages .advantages-element, main .subscribe .advantages-element {
   display: flex;
   align-items: center;
   padding-right: 130px;
   border-right: 2px solid #EEEFF2;
 }
-main .advantages .advantages-element figure {
+main .advantages .advantages-element figure, main .subscribe .advantages-element figure {
   background: #FFECEC;
   border-radius: 70px;
   box-sizing: border-box;
   padding: 15.5px;
   margin: 16.5px;
 }
-main .advantages .advantages-element:last-of-type {
+main .advantages .advantages-element:last-of-type, main .subscribe .advantages-element:last-of-type {
   padding: 0;
   border: 0;
 }
@@ -319,7 +319,7 @@ main .services .services-list .services-list--product .services-product--distric
   flex-direction: column;
   align-items: center;
 }
-main .services .services-list .services-list--product .services-product--distriction h4 {
+main .services .services-list .services-list--product .services-product--distriction h4, main .services .services-list .services-list--product .services-product--distriction footer ul li, footer ul main .services .services-list .services-list--product .services-product--distriction li {
   padding: 30px 0;
 }
 main .services .services-list .services-list--product .services-product--distriction li {
@@ -347,4 +347,173 @@ main .services .services-list .services-list--product .services-product--select 
 main .services .services-list .services-list--product .services-product--select a:hover {
   color: white;
   background-color: #F53838;
+}
+main .global-map {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 125px;
+}
+main .global-map .global-map--title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 150px;
+}
+main .global-map .global-map--title h2 {
+  width: 33%;
+}
+main .global-map .global-map--title p {
+  width: 45%;
+  padding-top: 20px;
+}
+main .global-map .global-map-map {
+  margin-left: auto;
+  margin-right: auto;
+}
+main .global-map .global-map--partners {
+  display: flex;
+  align-items: center;
+}
+main .global-map .global-map--partners div:first-of-type {
+  padding-right: 48px;
+}
+main .global-map .global-map--partners div:last-of-type {
+  padding-left: 48px;
+}
+main .reviews {
+  display: flex;
+  flex-direction: column;
+}
+main .reviews .reviews-main--title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 60px;
+}
+main .reviews .reviews-main--title h2 {
+  width: 33%;
+}
+main .reviews .reviews-main--title p {
+  width: 45%;
+  padding-top: 20px;
+}
+main .reviews .swiper-initialized .reviews-swiper {
+  display: flex;
+}
+main .reviews .swiper-initialized .reviews-swiper:first-of-type {
+  margin-left: 50px;
+}
+main .reviews .swiper-initialized .reviews-swiper .reviews-person {
+  width: 400px;
+  height: 230px;
+  display: flex;
+  padding: 30px;
+  margin-left: 50px;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 2px solid #DDDDDD;
+  border-radius: 10px;
+}
+main .reviews .swiper-initialized .reviews-swiper .reviews-person:hover {
+  border: 2px solid #F53838;
+}
+main .reviews .swiper-initialized .reviews-swiper .reviews-person .reviews-title {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 8px;
+}
+main .reviews .swiper-initialized .reviews-swiper .reviews-person .reviews-title .reviews-person--name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .reviews .swiper-initialized .reviews-swiper .reviews-person .reviews-title img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+main .reviews .swiper-initialized .reviews-swiper .reviews-person .reviews-title .reviews-rate {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+main .reviews .swiper-initialized .reviews-swiper .reviews-person .reviews-title .reviews-rate img {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  margin-left: 10px;
+}
+main .reviews .navigation {
+  display: flex;
+  margin: 60px 150px;
+}
+main .reviews .tabs-container a {
+  padding-left: 15px;
+}
+main .reviews .arrow-container {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+}
+main .reviews .arrow-container a {
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  padding: 15px;
+  border: 2px solid #F53838;
+  border-radius: 70px;
+}
+main .reviews .arrow-container a:last-of-type {
+  margin-left: 20px;
+  background-color: #F53838;
+}
+main .reviews .arrow-container a img {
+  width: 30px;
+  height: 30px;
+}
+main .subscribe {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+}
+main .subscribe .subscribe-title {
+  margin: 58px 70p 58px;
+  width: 37%;
+}
+
+footer {
+  position: relative;
+  display: flex;
+  z-index: 1;
+  margin-top: 64px;
+  margin-bottom: 100px;
+  background: #f8f8f8;
+  box-shadow: 0 -165px 1px #f8f8f8;
+}
+footer .social {
+  width: 50%;
+  color: #4F5665;
+  margin: 0 150px;
+}
+footer .social p {
+  width: 45%;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+footer .social mark {
+  color: #4F5665;
+}
+footer ul {
+  display: flex;
+}
+footer ul li {
+  display: flex;
+  color: #0B132A;
+}
+footer ul li ul {
+  display: flex;
+  color: #4F5665;
+  flex-direction: column;
 }/*# sourceMappingURL=index.css.map */
