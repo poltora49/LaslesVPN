@@ -27,12 +27,16 @@ header {
             padding:0 15px;
             font-weight: bold;
             color: $main_text;
+
         }
+        &:first-of-type{
+            a:hover{
+                color: $main_color;
+            }
+            
+        }            
         & a:last-of-type {
             padding: 13px 45px;
-            border: 1px solid #F53855;
-            border-radius: 50px;
-            color:$main_color;
         }
     }
 }

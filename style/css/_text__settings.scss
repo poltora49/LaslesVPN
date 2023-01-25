@@ -1,60 +1,91 @@
 
-    * {
-        font-family: 'Rubik', sans-serif;
-        color:$secondary_text;
-    }
+* {
+    font-family: 'Rubik', sans-serif;
+    color:$secondary_text;
+}
 
-    h1 {
-        font-weight: 500;
-        font-size: 50px;
-        line-height: 70px;
-        color:$main_text;
-    }
+h1 {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 70px;
+    color:$main_text;
+}
 
-    h2 {
-        font-weight: 500;
-        font-size: 35px;
-        line-height: 50px;
-        color: $main_text;
+h2 {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 50px;
+    color: $main_text;
 
-    }
+}
 
-    h3 {
-        font-weight: 700;
-        font-size: 25px;
-        line-height: 30px;
-        color: $main_text;
-    }
+h3 {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: $main_text;
+}
 
-    h4 {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 30px;
-        color: $main_text;
-    }
+h4 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    color: $main_text;
+}
 
-    h5 {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 8px;
-    }
+h5 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 8px;
+}
 
-    p {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 30px;
-    }
+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+}
 
-    li {
-        display: flex;
-        align-items: center;
-        p{
-        font-weight: 400!important;;
-        font-size: 14px!important;
-        line-height: 30px!important;;
-        }
+li {
+    display: flex;
+    align-items: center;
+    p{
+    font-weight: 400!important;;
+    font-size: 14px!important;
+    line-height: 30px!important;;
     }
+}
+p{
     mark{
-        color: $main_text;
-        font-weight: bold;
+        color: $secondary_text;
     }
+}
+mark{
+    color: $main_text;
+    font-weight: bold;
+}
+.round-button{
+    margin: 20px 0;
+    border: 2px solid #F53838;
+    border-radius: 50px;
+    font-weight: 700;
+    color: $main_color!important;
+    &:hover{
+        color: white!important;
+        background-color: $main_color;
+        box-shadow: 0 6px 25px rgba(255, 0, 0, 0.4509803922);
+    } 
+}
+.button{
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25px;
+
+    width: 250px;
+    height: 60px;
+
+    background: #F53838;
+    border-radius: 10px;
+    border-radius: 10px;
+    box-shadow: 0 6px 25px #ff000073;
+}

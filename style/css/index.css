@@ -151,9 +151,39 @@ li p {
   line-height: 30px !important;
 }
 
+p mark {
+  color: #4F5665;
+}
+
 mark {
   color: #0B132A;
   font-weight: bold;
+}
+
+.round-button {
+  margin: 20px 0;
+  border: 2px solid #F53838;
+  border-radius: 50px;
+  font-weight: 700;
+  color: #F53838 !important;
+}
+.round-button:hover {
+  color: white !important;
+  background-color: #F53838;
+  box-shadow: 0 6px 25px rgba(255, 0, 0, 0.4509803922);
+}
+
+.button {
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 25px;
+  width: 250px;
+  height: 60px;
+  background: #F53838;
+  border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 0 6px 25px rgba(255, 0, 0, 0.4509803922);
 }
 
 header {
@@ -184,11 +214,11 @@ header .header-buttons a {
   font-weight: bold;
   color: #0B132A;
 }
+header .header-buttons:first-of-type a:hover {
+  color: #F53838;
+}
 header .header-buttons a:last-of-type {
   padding: 13px 45px;
-  border: 1px solid #F53855;
-  border-radius: 50px;
-  color: #F53838;
 }
 
 footer {
@@ -208,13 +238,21 @@ footer figure {
   width: 34px;
   height: 34px;
   margin-right: 20px;
-  border-radius: 70px;
+}
+footer figure .background {
+  position: absolute;
+  width: 65%;
+  height: 65%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   background-color: #F53838;
+  box-shadow: 0px 13px 18px rgba(17, 19, 35, 0.08);
 }
 footer figure img {
   position: absolute;
-  width: 110%;
-  height: 110%;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
 }
@@ -227,6 +265,9 @@ footer .social p {
   width: 65%;
   margin-bottom: 30px;
   margin-top: 20px;
+}
+footer .social p:last-of-type {
+  color: #AFB5C0;
 }
 footer .social mark {
   font-weight: 500;
@@ -254,18 +295,8 @@ footer nav ul li:first-of-type a {
   line-height: 30px;
   padding-bottom: 20px;
 }
-
-button {
-  color: white;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 25px;
-  width: 250px;
-  height: 60px;
-  background: #F53838;
-  border-radius: 10px;
-  border-radius: 10px;
-  box-shadow: 0 6px 25px rgba(255, 0, 0, 0.4509803922);
+footer nav ul li:hover a {
+  color: #F53838;
 }
 
 .container {
@@ -276,7 +307,7 @@ button {
 .main-banner {
   display: flex;
   align-items: center;
-  padding: 0 150px;
+  padding: 0 80px 0 150px;
   margin-bottom: 100px;
 }
 .main-banner .main-banner--description {
@@ -299,6 +330,9 @@ button {
   padding: 91px 73px;
   justify-content: space-between;
   box-shadow: 0 45px 45px #f6f6f7;
+}
+.advantages h4, .subscribe h4 {
+  color: #4F5665;
 }
 .advantages .advantages-element, .subscribe .advantages-element {
   display: flex;
@@ -374,7 +408,7 @@ button {
   display: flex;
   justify-content: center;
 }
-.services .services-list .services-list--product {
+.services .services-list--product {
   position: relative;
   width: 30%;
   padding: 76px 76px 30px 76px;
@@ -385,45 +419,35 @@ button {
   border: 2px solid #DDDDDD;
   border-radius: 10px;
 }
-.services .services-list .services-list--product:hover {
+.services .services-list--product:hover {
   border: 2px solid #F53838;
 }
-.services .services-list .services-list--product .services-product--distriction {
+.services .services-list--product .services-product--distriction {
   height: 80%;
   padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.services .services-list .services-list--product .services-product--distriction h4 {
+.services .services-list--product .services-product--distriction h4 {
   padding: 30px 0;
 }
-.services .services-list .services-list--product .services-product--distriction li {
+.services .services-list--product .services-product--distriction li {
   padding-bottom: 10px;
 }
-.services .services-list .services-list--product .services-product--select {
+.services .services-list--product .services-product--select {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   height: 20%;
 }
-.services .services-list .services-list--product .services-product--select h3 {
+.services .services-list--product .services-product--select h3 {
+  font-weight: 400;
   color: #4F5665;
 }
-.services .services-list .services-list--product .services-product--select a {
-  display: flex;
+.services .services-list--product .services-product--select button {
   padding: 13px 63px;
-  margin: 20px 0;
-  border: 2px solid #F53838;
-  border-radius: 50px;
-  font-weight: 700;
-  color: #F53838;
-}
-.services .services-list .services-list--product .services-product--select a:hover {
-  color: white;
-  background-color: #F53838;
-  box-shadow: 0 6px 25px rgba(255, 0, 0, 0.4509803922);
 }
 
 .global-map {

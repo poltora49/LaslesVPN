@@ -7,21 +7,7 @@ $secondary_text:#4F5665;
 @import "footer.scss";
 
 // $secondary_color: #F53855;
-    button{
 
-        color: white;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 25px;
-
-        width: 250px;
-        height: 60px;
-
-        background: #F53838;
-        border-radius: 10px;
-        border-radius: 10px;
-        box-shadow: 0 6px 25px #ff000073;
-    }
     .container {
         display: flex;
         align-items: center;
@@ -29,7 +15,7 @@ $secondary_text:#4F5665;
     .main-banner {
         display: flex;
         align-items:center;
-        padding: 0 150px;
+        padding: 0 80px 0 150px;
         margin-bottom: 100px;
         .main-banner--description{
             width: 50%;
@@ -51,6 +37,9 @@ $secondary_text:#4F5665;
         padding: 91px 73px;
         justify-content: space-between;
         box-shadow: 0 45px 45px #f6f6f7;
+        h4{
+            color: $secondary_text;
+        }
         .advantages-element {
             display: flex;
             align-items: center;
@@ -127,59 +116,49 @@ $secondary_text:#4F5665;
         .services-list {
             display: flex;
             justify-content: center;
-            .services-list--product{
-                position: relative;
-                width: 30%;
-                padding:  76px 76px 30px 76px;
-                margin:0 25px;
+        }
+        .services-list--product{
+            position: relative;
+            width: 30%;
+            padding:  76px 76px 30px 76px;
+            margin:0 25px;
+            display: flex;
+            flex-direction: column;
+
+            background: #FFFFFF;
+            border: 2px solid #DDDDDD;
+            border-radius: 10px;
+            &:hover{
+                border: 2px solid $main_color;
+            }
+            .services-product--distriction{
+                height: 80%;
+                padding-bottom: 50px;
                 display: flex;
                 flex-direction: column;
-
-                background: #FFFFFF;
-                border: 2px solid #DDDDDD;
-                border-radius: 10px;
-                &:hover{
-                    border: 2px solid $main_color;
+                align-items: center;
+                h4{
+                    padding: 30px 0;
                 }
-                .services-product--distriction{
-                    height: 80%;
-                    padding-bottom: 50px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    h4{
-                        padding: 30px 0;
-                    }
-                    li{
-                        padding-bottom: 10px;
-                    }
-                }
-                .services-product--select {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: flex-end;
-                    height: 20%;
-                    h3{
-                        color: $secondary_text;
-                    }
-                    a {
-                        display: flex;
-                        padding: 13px 63px;
-                        margin: 20px 0;
-                        border: 2px solid #F53838;
-                        border-radius: 50px;
-                        font-weight: 700;
-                        color: $main_color;
-                        &:hover{
-                            color: white;
-                            background-color: $main_color;
-                            box-shadow: 0 6px 25px rgba(255, 0, 0, 0.4509803922);
-                        }    
-                    }
+                li{
+                    padding-bottom: 10px;
                 }
             }
-        }   
+            .services-product--select {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                height: 20%;
+                h3{
+                    font-weight: 400;
+                    color: $secondary_text;
+                }
+                button {
+                    padding: 13px 63px;
+                }
+            }
+        }  
     }
     .global-map{
         display: flex;
