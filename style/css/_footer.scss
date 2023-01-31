@@ -2,14 +2,14 @@ footer {
     position: relative;
     display: flex;
     z-index: 1;
-    margin-top: 64px;
+    margin-top: 64px!important;
     padding-bottom: 100px;
     background: #f8f8f8;
     box-shadow: 0 -165px 1px #f8f8f8;
     .social-media{
         display: flex;
     }
-    figure{
+    .figure{
         position: relative;
         width: 34px;
         height: 34px;
@@ -35,8 +35,12 @@ footer {
     .social {
         width: 50%;
         color: $secondary_text;
-        margin: 0 150px;
-
+        @media (max-width: $phone) {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
         p {
             width: 65%;        
             margin-bottom: 30px;
@@ -55,7 +59,7 @@ footer {
         width: 50%;
         display: flex;
         justify-content: space-between;
-        margin-right: 150px;
+        margin-right: calc(1.5rem + 10vh);
         ul{
             display: flex;
             flex-direction: column;

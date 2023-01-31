@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>LaslesVPN</title>
     <link rel="stylesheet" href="style/css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,103 +13,125 @@
   </head>
   <body>
 
-    <header>
-        <img src="style/image/Logo.png"/>
-        <nav>
-            <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">Help</a></li>
-            </ul>
+    <header class="main-container">
+        <a href="#">
+            <img src="style/image/Logo.svg"/>
+        </a>
+        <nav class="phone-none">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
         </nav>
-        <div class="header-buttons">
+        <div class="header-buttons phone-none">
             <a href="#">Sign In</a>
             <a href="#" class="round-button">Sign Up</a>
         </div>
+        <nav class="phone-only">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="menu">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Help</a></li>
+                    <div class="header-buttons phone-none">
+                        <a href="#">Sign In</a>
+                        <a href="#" class="round-button">Sign Up</a>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+
         
     </header>
     <main>
-        <section class="main-banner">
-            <div class="container">
+        <section class="main-banner main-container">
+                <div class="container">
 
-                <div class="main-banner--description">
-                    <h1>Want anything to be easy with <mark>LaslesVPN</mark>.</h1>
-                    <p>Provide a network for all your needs with ease and fun using <mark>LaslesVPN</mark> discover 
-                        interesting features from us.</p>
-                    <button class="button">Get Started</button>
+                    <div class="main-banner--description">
+                        <h1>Want anything to be easy with <mark>LaslesVPN</mark>.</h1>
+                        <p>Provide a network for all your needs with ease and fun using <mark>LaslesVPN</mark> discover 
+                            interesting features from us.</p>
+                        <button class="button">Get Started</button>
+                    </div>
+                    
+                    <img src="style/image/Ilustration_1.png" alt=""/>
+
                 </div>
-                
-                <img src="style/image/Ilustration_1.png" alt=""/>
-
-            </div>
         </section>
-        <section class="advantages">
+        <section class="advantages table-container">
 
-                <div class="advantages-element">
-                    <figure>
-                        <img src="style/image/Person.svg" alt="">
-                    </figure>
-                    <div class="advantages-element--details">
-                        <h3>90+</h3>
-                        <h4>Users</h4>
+                    <div class="advantages-element">
+                        <figure>
+                            <img src="style/image/Person.svg" alt="">
+                        </figure>
+                        <div class="advantages-element--details">
+                            <h3>90+</h3>
+                            <h4>Users</h4>
+                        </div>
+                    </div>
+
+                    <div class="advantages-element">
+                        <figure>
+                            <img src="style/image/Locations.svg" alt="">
+                        </figure>
+                        <div class="advantages-element--details">
+                            <h3>30+</h3>
+                            <h4>Locations</h4>
+                        </div>
+                    </div>
+
+                    <div class="advantages-element">
+                        <figure>
+                            <img src="style/image/Server.svg" alt="">
+                        </figure>
+                        <div class="advantages-element--details">
+                            <h3>50+</h3>
+                            <h4>Servers</h4>
+                        </div>
+                    </div>
+
+        </section>
+        <section class="features main-container">
+                <div class="container">
+                    <div class="features-content">
+                        <h2>We Provide Many Features You Can Use</h2>
+                        <p>You can explore the features that we provide with fun and have their own functions each feature.</p>
+                        <ul>
+                            <li>
+                                
+                                <p>Powerfull online protection.</p>
+                            </li>
+                            <li>
+                                
+                                <p>Internet without borders.</p>
+                            </li>
+                            <li>
+                                
+                                <p>Supercharged VPN</p>
+                            </li>
+                            <li>
+                                
+                                <p>No specific time limits.</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="features-image">
+                        <img src="style//image/Ilustration 2.png" alt="">
                     </div>
                 </div>
-
-                <div class="advantages-element">
-                    <figure>
-                        <img src="style/image/Locations.svg" alt="">
-                    </figure>
-                    <div class="advantages-element--details">
-                        <h3>30+</h3>
-                        <h4>Locations</h4>
-                    </div>
-                </div>
-
-                <div class="advantages-element">
-                    <figure>
-                        <img src="style/image/Server.svg" alt="">
-                    </figure>
-                    <div class="advantages-element--details">
-                        <h3>50+</h3>
-                        <h4>Servers</h4>
-                    </div>
-                </div>
-
         </section>
-        <section class="features">
-            <div class="container">
-                <div class="features-content">
-                    <h2>We Provide Many Features You Can Use</h2>
-                    <p>You can explore the features that we provide with fun and have their own functions each feature.</p>
-                    <ul>
-                        <li>
-                            <img src="style/image/Check_circle.svg" alt=""/>
-                            <p>Powerfull online protection.</p>
-                        </li>
-                        <li>
-                            <img src="style/image/Check_circle.svg" alt=""/>
-                            <p>Internet without borders.</p>
-                        </li>
-                        <li>
-                            <img src="style/image/Check_circle.svg" alt=""/>
-                            <p>Supercharged VPN</p>
-                        </li>
-                        <li>
-                            <img src="style/image/Check_circle.svg" alt=""/>
-                            <p>No specific time limits.</p>
-                        </li>
-
-                    </ul>
-                </div>
-                <div class="features-image">
-                    <img src="style//image/Ilustration 2.png" alt="">
-                </div>
-            </div>
-        </section>
-        <div class = 'gradient-background'>
-            <section class="services">
+        <section class="services main-container gradient-background">
                     <div class="services-title">
                         <h2>Choose Your Plan</h2>
                         <p>Let's choose the package that is best for you and explore it happily and cheerfully.</p>
@@ -121,19 +144,19 @@
                                 <h4><mark>Free Plan</mark></h4>
                                 <ul>
                                     <li>
-                                        <img src="style/image/Check.svg" alt=""/>
+                                        
                                         <p>Unlimited Bandwitch</p>
                                     </li>
                                     <li>
-                                        <img src="style/image/Check.svg" alt=""/>
+                                        
                                         <p>Encrypted Connection</p>
                                     </li>
                                     <li>
-                                        <img src="style/image/Check.svg" alt=""/>
+                                        
                                         <p>No Traffic Logs</p>
                                     </li>
                                     <li>
-                                        <img src="style/image/Check.svg" alt=""/>
+                                        
                                         <p>Works on All Devices</p>
                                     </li>
                                 </ul>
@@ -151,23 +174,23 @@
                                 <h4><mark>Standard Plan</mark></h4>
                                 <ul>
                                     <li>
-                                        <img src="style/image/Check.svg" alt=""/>
+                                        
                                         <p>Unlimited Bandwitch</p>
                                     </li>
                                     <li>
-                                        <img src="style/image/Check.svg" alt=""/>
+                                        
                                         <p>Encrypted Connection</p>
                                     </li>
                                     <li>
-                                        <img src="style/image/Check.svg" alt=""/>
+                                        
                                         <p>Yes Traffic Logs</p>
                                     </li>
                                     <li>
-                                        <img src="style/image/Check.svg" alt=""/>
+                                        
                                         <p>Works on All Devices</p>
                                     </li>
                                     <li>
-                                        <img src="style/image/Check.svg" alt=""/>
+                                        
                                         <p>Connect Anyware</p>
                                     </li>
                                 </ul>
@@ -185,27 +208,27 @@
                                 <h4><mark>Premium Plan</mark></h4>
                                 <ul>
                                     <li>
-                                        <img src="style/image/Check.svg" alt=""/>
+                                        
                                         <p>Unlimited Bandwitch</p>
                                     </li>
                                     <li>
-                                        <img src="style/image/Check.svg" alt=""/>
+                                        
                                         <p>Encrypted Connection</p>
                                     </li>
                                     <li>
-                                        <img src="style/image/Check.svg" alt=""/>
+                                        
                                         <p>Yes Traffic Logs</p>
                                     </li>
                                     <li>
-                                        <img src="style/image/Check.svg" alt=""/>
+                                        
                                         <p>Works on All Devices</p>
                                     </li>
                                     <li>
-                                        <img src="style/image/Check.svg" alt=""/>
+                                        
                                         <p>Connect Anyware</p>
                                     </li>
                                     <li>
-                                        <img src="style/image/Check.svg" alt=""/>
+                                        
                                         <p>Get New Features</p>
                                     </li>
                                 </ul>
@@ -218,8 +241,8 @@
                         </div>
 
                     </div>
-            </section>
-            <section class="global-map">
+        </section>
+        <section class="global-map main-container">
 
                     <div class="global-map--title">
                         <h2>Huge Global Network of Fast VPN</h2>
@@ -248,9 +271,8 @@
                             </div>
                     </div>
 
-            </section>
-        </div>
-        <section class="reviews">
+        </section>
+        <section class="reviews main-container">
 
                 <div class="reviews-main--title">
                     <h2>Trusted by Thousands of Happy Customer</h2>
@@ -273,7 +295,6 @@
 
                                 <div class="reviews-rate">
                                     <p>4.5</p>
-                                    <img src="style/image/Star.svg" alt="">
                                 </div>
 
                             </div>
@@ -283,7 +304,7 @@
 
                         </div>
 
-                        <div class="reviews-person">
+                        <div class="reviews-person ">
 
                             <div class="reviews-title">
                                 <img src="style/image/Cristy_Custumer.png" alt="">
@@ -295,7 +316,6 @@
 
                                 <div class="reviews-rate">
                                     <p>4.5</p>
-                                    <img src="style/image/Star.svg" alt="">
                                 </div>
 
                             </div>
@@ -304,7 +324,7 @@
 
                         </div>
 
-                        <div class="reviews-person">
+                        <div class="reviews-person ">
 
                             <div class="reviews-title">
                                 <img src="style/image/Kim_Custumer.png" alt="">
@@ -316,7 +336,6 @@
 
                                 <div class="reviews-rate">
                                     <p>4.5</p>
-                                    <img src="style/image/Star.svg" alt="">
                                 </div>
 
                             </div>
@@ -336,15 +355,38 @@
                         </div>
 
                         <div class="arrow-container">
-                            <a href="#"><img src="style/image/Arrow_Back_Fill.svg" alt=""></a>
-                            <a href="#"><img src="style/image/Arrow_Forwards_Fill.svg" alt=""></a>
+                            <a href="#">
+                                <svg width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30.2529" r="29" stroke="#F53838" stroke-width="2"/>
+                                    <path d="M38.75 29.0029H23.925L28.4625 23.5529C28.6747 23.2976 28.7768 22.9685 28.7463 22.638C28.7158 22.3075 28.5553 22.0026 28.3 21.7904C28.0447 21.5782 27.7156 21.4762 27.3851 21.5066C27.0546 21.5371 26.7497 21.6976 26.5375 21.9529L20.2875 29.4529C20.2455 29.5126 20.2078 29.5752 20.175 29.6404C20.175 29.7029 20.175 29.7404 20.0875 29.8029C20.0308 29.9462 20.0012 30.0988 20 30.2529C20.0012 30.407 20.0308 30.5596 20.0875 30.7029C20.0875 30.7654 20.0875 30.8029 20.175 30.8654C20.2078 30.9306 20.2455 30.9933 20.2875 31.0529L26.5375 38.5529C26.655 38.694 26.8022 38.8075 26.9686 38.8853C27.1349 38.963 27.3164 39.0032 27.5 39.0029C27.7921 39.0035 28.0751 38.9018 28.3 38.7154C28.4266 38.6105 28.5312 38.4816 28.6079 38.3362C28.6846 38.1907 28.7318 38.0316 28.7469 37.8679C28.762 37.7042 28.7447 37.5391 28.6959 37.3821C28.6471 37.2251 28.5678 37.0792 28.4625 36.9529L23.925 31.5029H38.75C39.0815 31.5029 39.3995 31.3712 39.6339 31.1368C39.8683 30.9024 40 30.5844 40 30.2529C40 29.9214 39.8683 29.6034 39.6339 29.369C39.3995 29.1346 39.0815 29.0029 38.75 29.0029Z" fill="#F53838"/>
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30.2529" r="29" stroke="#F53838" stroke-width="2"/>
+                                    <path d="M38.75 29.0029H23.925L28.4625 23.5529C28.6747 23.2976 28.7768
+                                     22.9685 28.7463 22.638C28.7158 22.3075 28.5553 22.0026 28.3 21.7904C28.0447
+                                     21.5782 27.7156 21.4762 27.3851 21.5066C27.0546 21.5371 26.7497 21.6976 26.5375 
+                                     21.9529L20.2875 29.4529C20.2455 29.5126 20.2078 29.5752 20.175 29.6404C20.175 
+                                     29.7029 20.175 29.7404 20.0875 29.8029C20.0308 29.9462 20.0012 30.0988 20 
+                                     30.2529C20.0012 30.407 20.0308 30.5596 20.0875 30.7029C20.0875 30.7654 20.0875
+                                     30.8029 20.175 30.8654C20.2078 30.9306 20.2455 30.9933 20.2875 31.0529L26.5375
+                                     38.5529C26.655 38.694 26.8022 38.8075 26.9686 38.8853C27.1349 38.963 27.3164
+                                     39.0032 27.5 39.0029C27.7921 39.0035 28.0751 38.9018 28.3 38.7154C28.4266 38.6105
+                                     28.5312 38.4816 28.6079 38.3362C28.6846 38.1907 28.7318 38.0316 28.7469 37.8679C28.762
+                                     37.7042 28.7447 37.5391 28.6959 37.3821C28.6471 37.2251 28.5678 37.0792 28.4625 
+                                     36.9529L23.925 31.5029H38.75C39.0815 31.5029 39.3995 31.3712 39.6339 31.1368C39.8683
+                                     30.9024 40 30.5844 40 30.2529C40 29.9214 39.8683 29.6034 39.6339 29.369C39.3995 
+                                     29.1346 39.0815 29.0029 38.75 29.0029Z" fill="#F53838"/>
+                                </svg>
+                            </a>
                         </div>
                     </div>
 
                 </div>
 
         </section>
-        <section class="subscribe">
+        <section class="subscribe table-container">
             <div class="subscribe-title">
                 <h2>Subscribe Now for Get Special Features!</h2>
                 <p>Let's subscribe with us and find the fun.</p>
@@ -353,30 +395,30 @@
             <button class="button">Subscribe Now</button>
         </section>
     </main>
-    <footer>
+    <footer class="main-container">
         <div class="social">
             <a href="#">
-                <img src="style/image/Logo.png" alt="">
+                <img src="style/image/Logo.svg" alt="">
             </a>
             <p><mark>LaslesVPN</mark> is a private virtual network that has unique features and has high security.</p>
 
             <div class="social-media">
-                <figure>
+                <a href="#" class="figure">
                     <div class="background"></div>
                     <img src="style/image/Facebook.svg" alt="">
-                </figure>
-                <figure>
+                </a>
+                <a href="#" class="figure">
                     <div class="background"></div>
                     <img src="style/image/Twitter.svg" alt="">
-                </figure>
-                <figure>
+                </a>
+                <a href="#" class="figure">
                     <div class="background""></div>
                     <img src="style/image/Instagram.svg" alt="">
-                </figure>    
+                </a>    
             </div>
             <p>©2020LaslesVPN</p>
         </div>
-        <nav>
+        <nav class="phone-none">
             <ul class="footer-menu">
                 <li><a href="">Product</a></li>
                 <li><a href="">Download </a></li>
@@ -404,6 +446,8 @@
                     
             </ul>       
          </nav>
+
+        
 
     </footer>
 
