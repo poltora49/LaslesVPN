@@ -5,7 +5,7 @@ header {
     position: relative;
     margin: 4% 0 7%;
 
-    nav {
+    nav.phone-none  {
         width: 35%;
             ul {
             display: flex;
@@ -33,7 +33,7 @@ header {
             padding: 13px 45px;
         }
     }
-    #menuToggle{
+    .menuToggle{
       display: block;
       position: relative;
       user-select: none;
@@ -89,7 +89,7 @@ header {
   /*
   * But let's hide the middle one.
   */
-  #menuToggle input:checked ~ span:nth-last-child(3)
+  .menuToggle input:checked ~ span:nth-last-child(3)
   {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
@@ -98,40 +98,37 @@ header {
   /*
   * Ohyeah and the last one should go the other direction
   */
-  #menuToggle input:checked ~ span:nth-last-child(2)
+  .menuToggle input:checked ~ span:nth-last-child(2)
   {
     transform: rotate(-45deg) translate(0, -1px);
   }
 
-  /*
-  * Make this absolute positioned
-  * at the top left of the screen
-  */
-  #menu
-  {
-    position: absolute;
-    width: 300px;
-    margin: -100px 0 0 -50px;
-    padding: 50px;
-    padding-top: 125px;
-    
-    background: #ededed;
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
-    
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
-    
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  .menu{
+    position:absolute;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing:10px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    opacity:0;
+    transition: .4s;
+    margin-top:100px;
+    transform: translateY(-200%);
+    pointer-events:none;
+    li {
+      transition: 1s;
+      opacity: 0;
+      margin-top: 0px;
+    }
+    &.fs {
+      transform: translateY(0);
+      pointer-events:auto;
+      opacity: 1;
+      li{
+        opacity: 1;
+        margin-top: 75px;
+      }
+    }
   }
-
-
-  /*
-  * And let's slide it in from the left
-  */
-  // #menuToggle input:checked ~ ul
-  // {
-  //   transform: none;
-  // }
   }

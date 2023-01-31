@@ -321,7 +321,7 @@ mark {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .phone-only {
     display: none;
   }
@@ -339,23 +339,16 @@ header {
   /*
   * Ohyeah and the last one should go the other direction
   */
-  /*
-  * Make this absolute positioned
-  * at the top left of the screen
-  */
-  /*
-  * And let's slide it in from the left
-  */
 }
-header nav {
+header nav.phone-none {
   width: 35%;
 }
-header nav ul {
+header nav.phone-none ul {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
-header nav ul a:hover {
+header nav.phone-none ul a:hover {
   color: #F53838;
 }
 header .header-buttons a {
@@ -369,7 +362,7 @@ header .header-buttons:first-of-type a:hover {
 header .header-buttons a:last-of-type {
   padding: 13px 45px;
 }
-header #menuToggle {
+header .menuToggle {
   display: block;
   position: relative;
   -webkit-user-select: none;
@@ -377,7 +370,7 @@ header #menuToggle {
       -ms-user-select: none;
           user-select: none;
 }
-header #menuToggle input {
+header .menuToggle input {
   display: block;
   width: 40px;
   height: 32px;
@@ -386,7 +379,7 @@ header #menuToggle input {
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */
 }
-header #menuToggle span {
+header .menuToggle span {
   display: block;
   width: 33px;
   height: 4px;
@@ -398,37 +391,51 @@ header #menuToggle span {
   transform-origin: 4px 0px;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
-header #menuToggle span:first-child {
+header .menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
-header #menuToggle span:nth-last-child(2) {
+header .menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
-header #menuToggle input:checked ~ span {
+header .menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
-header #menuToggle input:checked ~ span:nth-last-child(3) {
+header .menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
-header #menuToggle input:checked ~ span:nth-last-child(2) {
+header .menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
-header #menu {
+header .menu {
   position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 10px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: 0.4s;
+  margin-top: 100px;
+  transform: translateY(-200%);
+  pointer-events: none;
+}
+header .menu li {
+  transition: 1s;
+  opacity: 0;
+  margin-top: 0px;
+}
+header .menu.fs {
+  transform: translateY(0);
+  pointer-events: auto;
+  opacity: 1;
+}
+header .menu.fs li {
+  opacity: 1;
+  margin-top: 75px;
 }
 
 footer {
@@ -524,6 +531,7 @@ footer nav ul li:hover a {
 .main-banner {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 7%;
 }
 @media (max-width: 760px) {
@@ -559,6 +567,12 @@ footer nav ul li:hover a {
   box-shadow: 0 45px 45px #f6f6f7;
   margin-bottom: 7%;
 }
+@media (max-width: 768px) {
+  .advantages, .subscribe {
+    width: 50%;
+    margin: auto auto 7% auto;
+  }
+}
 .advantages h4, .subscribe h4 {
   color: #4F5665;
 }
@@ -569,9 +583,14 @@ footer nav ul li:hover a {
   margin: 3% 0;
   border-right: 2px solid #EEEFF2;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .advantages .advantages-element, .subscribe .advantages-element {
-    display: none;
+    flex-direction: column-reverse;
+    padding: 0 3% !important;
+    text-align: center;
+  }
+  .advantages .advantages-element figure, .subscribe .advantages-element figure {
+    margin: 25px !important;
   }
 }
 .advantages .advantages-element figure, .subscribe .advantages-element figure {
@@ -622,6 +641,7 @@ footer nav ul li:hover a {
   }
   .features .container .features-image {
     width: 90%;
+    text-align: center;
   }
 }
 .features .features-image {
@@ -671,7 +691,6 @@ footer nav ul li:hover a {
 }
 .services .services-list {
   display: flex;
-  overflow-x: scroll;
   padding-bottom: 15px;
 }
 @media (min-width: 768px) {
@@ -680,13 +699,19 @@ footer nav ul li:hover a {
     overflow-x: auto;
   }
 }
+@media (max-width: 660px) {
+  .services .services-list {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 .services .services-list--product {
   position: relative;
   width: 30%;
   min-width: 180px;
   max-width: 330px;
   padding: 6% 6% 2% 6%;
-  margin: 0 25px;
+  margin: 0 2%;
   display: flex;
   flex-direction: column;
   background: #FFFFFF;
@@ -696,6 +721,16 @@ footer nav ul li:hover a {
 @media (max-width: 1024px) {
   .services .services-list--product {
     padding: 4% 4% 1% 4%;
+  }
+}
+@media (max-width: 660px) {
+  .services .services-list--product {
+    width: 70%;
+    height: 50%;
+    margin-bottom: 5%;
+  }
+  .services .services-list--product .services-product--districtioon img {
+    width: 50%;
   }
 }
 .services .services-list--product:hover {
@@ -747,7 +782,7 @@ footer nav ul li:hover a {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-bottom: 150px;
+  padding-bottom: 13%;
 }
 @media (max-width: 768px) {
   .global-map .global-map--title h2 {
@@ -773,12 +808,21 @@ footer nav ul li:hover a {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 9%;
 }
-.global-map .global-map--partners div:first-of-type {
-  padding-right: 48px;
+@media (max-width: 768px) {
+  .global-map .global-map--partners {
+    flex-wrap: wrap;
+  }
+  .global-map .global-map--partners .partner {
+    max-width: 110px;
+  }
 }
-.global-map .global-map--partners div:last-of-type {
-  padding-left: 48px;
+.global-map .global-map--partners .partner {
+  padding-right: 5%;
+}
+.global-map .global-map--partners .partner:last-of-type {
+  padding: 0;
 }
 
 .reviews {
@@ -791,7 +835,7 @@ footer nav ul li:hover a {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 6%;
 }
 @media (max-width: 768px) {
   .reviews .reviews-main--title h2 {

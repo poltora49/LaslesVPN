@@ -182,7 +182,7 @@ mark{
     }
 }
 .phone-only{
-    @media screen and (min-width:$tablet){
+    @media screen and (min-width:1025px){
         display: none;
     }
 }

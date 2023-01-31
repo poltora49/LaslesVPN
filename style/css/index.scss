@@ -17,6 +17,7 @@ $screen: 1440px;
 .main-banner {
     display: flex;
     align-items:center;
+    justify-content: center;
     margin-bottom: 7%;
     .container {
     @media (max-width:760px) {
@@ -50,17 +51,27 @@ $screen: 1440px;
     justify-content: center;
     box-shadow: 0 45px 45px #f6f6f7;
     margin-bottom: 7%;
+    @media (max-width: 768px) {
+        width: 50%;
+        margin: auto auto 7% auto;
+    }
     h4{
         color: $secondary_text;
     }
+    
     .advantages-element {
         display: flex;
         align-items: center;
         padding: 0 10%;
         margin: 3% 0;
         border-right: 2px solid #EEEFF2;
-        @media screen and (max-width:768px) {
-            display: none;
+        @media (max-width: 768px) {
+            flex-direction: column-reverse;
+            padding: 0 3%!important;
+            text-align: center;
+            figure{
+                margin: 25px!important;
+            }
         }
         figure {
             width: 55px;
@@ -79,6 +90,7 @@ $screen: 1440px;
         }
     }
     img{
+
         width: 24px;
         height: 24px;
     }
@@ -107,6 +119,7 @@ $screen: 1440px;
             }
             .features-image{
                 width: 90%;
+                text-align: center;
             }
         }
     }
@@ -159,11 +172,14 @@ $screen: 1440px;
     }
     .services-list {
         display: flex;
-        overflow-x: scroll;
         padding-bottom: 15px;
         @media (min-width: 768px) {
             justify-content: center;
             overflow-x: auto;
+        }
+        @media (max-width:660px) {
+            justify-content: center;
+            flex-wrap: wrap;
         }
     }
     .services-list--product{
@@ -175,7 +191,15 @@ $screen: 1440px;
         @media (max-width:$tablet) {
             padding: 4% 4% 1% 4%;
         }
-        margin:0 25px;
+        @media (max-width:660px) {
+            .services-product--districtioon img{
+                width: 50%;
+            }
+            width: 70%;
+            height: 50%;
+            margin-bottom: 5%;
+        }
+        margin:0 2%;
         display: flex;
         flex-direction: column;
         background: #FFFFFF;
@@ -231,7 +255,7 @@ $screen: 1440px;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-bottom: 150px;
+        padding-bottom: 13%;
         @media (max-width:768px) {
             h2{
                 width: 90%!important;  
@@ -258,13 +282,21 @@ $screen: 1440px;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: 9%;
+        @media (max-width:768px) {
+                flex-wrap: wrap;
+                .partner{
+                    max-width: 110px;
+                }
+            }
+        .partner{
+            padding-right: 5%;        
+            &:last-of-type{
+                padding: 0;
+            }
 
-        & div:first-of-type{
-            padding-right: 48px;
         }
-        & div:last-of-type{
-            padding-left: 48px;
-        }
+
     }
 }
 .reviews{
@@ -277,7 +309,7 @@ $screen: 1440px;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-bottom: 60px;
+        padding-bottom: 6%;
         @media (max-width:768px) {
             h2{
                 width: 90%!important;  
