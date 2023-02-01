@@ -248,6 +248,11 @@ mark {
   background-color: #F53838;
   box-shadow: 0 6px 25px rgba(255, 0, 0, 0.4509803922);
 }
+@media (max-width: 768px) {
+  .round-button {
+    width: 20%;
+  }
+}
 @media screen and (min-width: 1024px) {
   .round-button {
     padding: 10px 35px;
@@ -333,23 +338,27 @@ header {
   justify-content: space-between;
   position: relative;
   margin: 4% 0 7%;
-  /*
-  * But let's hide the middle one.
-  */
-  /*
-  * Ohyeah and the last one should go the other direction
-  */
 }
-header nav.phone-none {
-  width: 35%;
-}
-header nav.phone-none ul {
+header nav {
   display: flex;
-  width: 100%;
   justify-content: space-between;
+  width: 74%;
 }
-header nav.phone-none ul a:hover {
+header nav ul {
+  width: 49%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+header nav ul a:hover {
   color: #F53838;
+}
+header nav .burger-ul {
+  display: none;
+}
+header .header-buttons {
+  width: 51%;
+  text-align: end;
 }
 header .header-buttons a {
   padding: 0 15px;
@@ -359,83 +368,99 @@ header .header-buttons a {
 header .header-buttons:first-of-type a:hover {
   color: #F53838;
 }
+@media (max-width: 1024px) {
+  header .header-buttons:first-of-type a:hover {
+    font-size: 12.8px;
+  }
+}
 header .header-buttons a:last-of-type {
   padding: 13px 45px;
 }
-header .menuToggle {
-  display: block;
-  position: relative;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+@media (max-width: 1024px) {
+  header .header-buttons {
+    width: 95%;
+  }
+  header .header-buttons a {
+    font-size: 10px;
+  }
 }
-header .menuToggle input {
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
+@media (max-width: 560px) {
+  header .header-buttons {
+    width: 90%;
+  }
+  header .header-buttons a {
+    font-size: 10px;
+    border: 0;
+    padding: 3px !important;
+  }
+}
+header .burger {
+  border: 0;
   cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-}
-header .menuToggle span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
+  display: none;
   position: relative;
-  background: #4F5665;
-  border-radius: 3px;
-  z-index: 1;
-  transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  padding: 0;
+  outline: none;
+  height: 30px;
+  width: 30px;
 }
-header .menuToggle span:first-child {
-  transform-origin: 0% 0%;
+header .burger-btn {
+  overflow: visible;
+  cursor: pointer;
+  fill: #F53838;
 }
-header .menuToggle span:nth-last-child(2) {
-  transform-origin: 0% 100%;
+header .burger-btn--1, header .burger-btn--2, header .burger-btn--3 {
+  transition: 0.2s;
+  transform-origin: center center;
 }
-header .menuToggle input:checked ~ span {
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+header .burger-btn.active .burger-btn--1 {
+  transform: translate(-7px, 7px) rotate(45deg);
 }
-header .menuToggle input:checked ~ span:nth-last-child(3) {
+header .burger-btn.active .burger-btn--2 {
+  transform: translateX(20px);
   opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
 }
-header .menuToggle input:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(0, -1px);
+header .burger-btn.active .burger-btn--3 {
+  transform: translate(-7px, -7px) rotate(-45deg);
 }
-header .menu {
-  position: absolute;
-  font-weight: bold;
-  font-size: 40px;
-  letter-spacing: 10px;
-  color: white;
-  width: 100%;
-  text-align: center;
-  opacity: 0;
-  transition: 0.4s;
-  margin-top: 100px;
-  transform: translateY(-200%);
-  pointer-events: none;
-}
-header .menu li {
-  transition: 1s;
-  opacity: 0;
-  margin-top: 0px;
-}
-header .menu.fs {
-  transform: translateY(0);
-  pointer-events: auto;
-  opacity: 1;
-}
-header .menu.fs li {
-  opacity: 1;
-  margin-top: 75px;
+@media screen and (max-width: 1024px) {
+  header header h1 {
+    font-size: 2em;
+  }
+  header .burger {
+    display: block;
+  }
+  header .burger.show-x .bar:first-of-type {
+    transform: translate(-50%, 50%) rotate(225deg);
+  }
+  header nav ul {
+    display: none;
+  }
+  header .burger.show-x .bar:nth-child(2) {
+    display: none;
+  }
+  header .burger.show-x .bar:last-of-type {
+    transform: translate(-50%, 50%) rotate(225deg);
+  }
+  header .burger-ul {
+    display: flex !important;
+    background-color: #fff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    top: 90px;
+    transform: translateX(120%);
+    width: 80% !important;
+    transition: transform 0.3s ease-in;
+    z-index: 100;
+  }
+  header ul.show {
+    transform: translateX(0);
+  }
+  header ul li {
+    margin: 15px;
+  }
 }
 
 footer {
@@ -570,7 +595,16 @@ footer nav ul li:hover a {
 @media (max-width: 768px) {
   .advantages, .subscribe {
     width: 50%;
-    margin: auto auto 7% auto;
+    margin: auto auto 7% auto !important;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .advantages, .subscribe {
+    padding: 10px;
+  }
+  .advantages .advantages-element, .subscribe .advantages-element {
+    padding: 0 5%;
+    margin: 1% 0;
   }
 }
 .advantages h4, .subscribe h4 {
@@ -600,10 +634,7 @@ footer nav ul li:hover a {
   border-radius: 70px;
   box-sizing: border-box;
   padding: 15.5px;
-  margin: 36px;
-}
-.advantages .advantages-element:first-of-type, .subscribe .advantages-element:first-of-type {
-  padding-left: 5%;
+  margin: 36px 36px 36px 0;
 }
 .advantages .advantages-element:last-of-type, .subscribe .advantages-element:last-of-type {
   border: 0;
@@ -611,15 +642,6 @@ footer nav ul li:hover a {
 .advantages img, .subscribe img {
   width: 24px;
   height: 24px;
-}
-@media screen and (max-width: 1200px) {
-  .advantages, .subscribe {
-    padding: 10px;
-  }
-  .advantages .advantages-element, .subscribe .advantages-element {
-    padding: 0 5%;
-    margin: 1% 0;
-  }
 }
 
 .features {
@@ -858,7 +880,7 @@ footer nav ul li:hover a {
   overflow: hidden;
 }
 .reviews .reviews-swiper .reviews-person {
-  min-width: 310px;
+  min-height: 230px !important;
   display: flex;
   padding: 30px;
   margin-right: 50px;
@@ -916,8 +938,28 @@ footer nav ul li:hover a {
     height: 45px;
   }
 }
-.reviews .tabs-container a {
-  padding-left: 15px;
+.reviews .slick-dots {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem 0;
+  list-style-type: none;
+}
+.reviews .slick-dots li {
+  margin: 0 0.25rem;
+}
+.reviews .slick-dots button {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  border: none;
+  border-radius: 100%;
+  background-color: #dde0e4;
+  text-indent: -9999px;
+}
+.reviews .slick-dots li.slick-active button {
+  background-color: #F53838;
 }
 .reviews .arrow-container {
   margin-left: auto;
@@ -925,18 +967,18 @@ footer nav ul li:hover a {
   flex-direction: row;
   margin-left: 20px;
 }
-.reviews .arrow-container a {
+.reviews .arrow-container svg {
   width: 60px;
   height: 60px;
 }
-.reviews .arrow-container a:last-of-type {
+.reviews .arrow-container svg:last-of-type {
   margin-left: 1rem;
   transform: rotate(180deg);
 }
-.reviews .arrow-container a svg:hover {
+.reviews .arrow-container svg svg:hover {
   fill: #F53838;
 }
-.reviews .arrow-container a svg:hover path {
+.reviews .arrow-container svg svg:hover path {
   fill: white;
 }
 

@@ -53,7 +53,14 @@ $screen: 1440px;
     margin-bottom: 7%;
     @media (max-width: 768px) {
         width: 50%;
-        margin: auto auto 7% auto;
+        margin: auto auto 7% auto!important;
+    }
+    @media screen and (max-width:$tablet) {
+        padding: 10px;
+        .advantages-element{
+            padding: 0 5%;
+            margin: 1% 0;
+        }
     }
     h4{
         color: $secondary_text;
@@ -80,10 +87,7 @@ $screen: 1440px;
             border-radius: 70px;
             box-sizing: border-box;
             padding: 15.5px;
-            margin: 36px;
-        }
-        &:first-of-type{
-            padding-left: 5%;
+            margin: 36px 36px 36px 0;
         }
         &:last-of-type{
             border:0;
@@ -94,13 +98,7 @@ $screen: 1440px;
         width: 24px;
         height: 24px;
     }
-    @media screen and (max-width:1200px) {
-        padding: 10px;
-        .advantages-element{
-            padding: 0 5%;
-            margin: 1% 0;
-        }
-    }
+
     
 }
 
@@ -332,7 +330,7 @@ $screen: 1440px;
         display: flex;
         overflow: hidden;
         .reviews-person{
-            min-width: 310px;
+            min-height: 230px!important;
             display: flex;                        
             padding:30px;
             margin-right: 50px;
@@ -341,10 +339,7 @@ $screen: 1440px;
             border: 2px solid #DDDDDD;
             border-radius: 10px;
             &:hover {
-            border: 2px solid #F53838;
-
-
-            }
+            border: 2px solid #F53838; }
             @media (min-width:1024px) {
                 min-width: 400px;
             }
@@ -397,18 +392,42 @@ $screen: 1440px;
             }
         }
     }
-    .tabs-container{
-        a{
-            padding-left: 15px;
-        }
-
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 1rem 0;
+        
+        list-style-type: none;
+        
+            li {
+                margin: 0 0.25rem;
+            }
+        
+            button {
+                display: block;
+                width: 1rem;
+                height: 1rem;
+                padding: 0;
+                
+                border: none;
+                border-radius: 100%;
+                background-color: #dde0e4;
+                
+                text-indent: -9999px;
+            }
+        
+            li.slick-active button {
+                background-color: $main_color;
+            }
+        
     }
     .arrow-container{
         margin-left: auto;                
         display: flex;
         flex-direction: row;
         margin-left: 20px;
-        a{
+        svg{
             width: 60px;
             height: 60px;                
             &:last-of-type{

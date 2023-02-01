@@ -123,6 +123,9 @@ mark{
         background-color: $main_color;
         box-shadow: 0 6px 25px rgba(255, 0, 0, 0.4509803922);
     }
+    @media (max-width:768px) {
+        width: 20%;
+    }
     @media screen and (min-width:$tablet) {
         padding: 10px 35px;
         font-size: 12.8px;
