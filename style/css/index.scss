@@ -416,6 +416,7 @@ $screen: 1440px;
                 background-color: #dde0e4;
                 
                 text-indent: -9999px;
+                
             }
         
             li.slick-active button {
@@ -435,7 +436,6 @@ $screen: 1440px;
                 margin-left: 1rem;
                 transform: rotate(180deg);
             }
-            svg{
                 &:hover{
                     fill:$main_color;
                     path{
@@ -443,7 +443,6 @@ $screen: 1440px;
                     }
                 }
 
-            }
         }
     }
 }
