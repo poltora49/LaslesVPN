@@ -22,3 +22,16 @@ $(document).mouseup( function(e){ // событие клика по веб-до�
     }
   }
 });
+
+$(window).scroll(function() {
+	var scrolled = $(window).scrollTop();
+  if (burger.classList.contains('show-x')
+  && ul.classList.contains('show')){
+    if ( scrolled > 100) {
+      burger.classList.toggle('show-x');
+      ul.classList.toggle('show');
+      button.classList.toggle('active');
+    }
+  }
+	
+});
