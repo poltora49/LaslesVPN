@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LaslesVPN</title>
+    <!-- <link rel="stylesheet" type="text/css" href="style/slick/slick.css"/> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../style/css/index.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main class="">
+        <section class="button-create mx-auto my-4 container text-center">
+            <button type="button" class=" btn btn-dark" id="quize">
+                Create quize
+            </button>
+        </section>
+        <section class="form-quize container mx-auto">
+            <form class="form col container p-4 my-4 card position-relative" id="form">
+                <h3 class="h3">
+                    Name Quize:
+                </h3>
+                <input class="form-name form-control w-75 my-3 " for="" name="question" placeholder="Enter name quize" type="text">
+                <button type="button" class="my-3 btn btn-outline-dark" id="question">
+                    Create question
+                </button>
+                <div class="form-question container card my-3 p-3  position-relative">
+                    <div class="form-answer-name col" id="answer">
+                        <h3 class="h3">
+                            Name question:
+                        </h3>
+                        <input class="form-answer--input form-control w-75  my-3" for="form-control" name="question" placeholder="Enter question" type="text">
+                        <button type="button" class="btn-close m-2 position-absolute end-0 top-0" aria-label="Закрыть"></button>
+                    </div>
+                        <button type="button" class=" btn btn-outline-dark my-3 ">
+                        Create answer
+                    </button>
+
+                    <div class="form-answer container py-3 col d-flex justify-content-end align-items-center">
+                        <input  class="form-answer--input form-control w-75 form-label my-3 me-0 " name="answer-text" placeholder="Enter answer" type="text">
+                        <input class="form-answer--radio mx-2" type="radio" name="answer" id="flexRadioCheckedDisabled" >
+                        
+                        <button type="button" class="btn-close" aria-label="Закрыть"></button>
+                    </div> 
+                    
+                </div>
+                <button type="button" class="btn-close position-absolute m-2 end-0 top-0" aria-label="Закрыть"></button>
+            </form>
+        </section>
+
+        <section class="button-save container my-4 text-end">
+            <button type="button" class=" btn btn-dark" id="submit">
+                Send
+            </button>
+        </section>
+
+        <!-- <section class="alert position-absolute bottom-0">
+            <div class="alert alert-success" role="alert">
+                Простое success уведомление - зацените!
+              </div>
+        </section> -->
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="../script/js/burger.js"></script> -->
+    <script type="text/javascript" src="../scripts/js/quize.js"></script>
+  </body>
+</html>
